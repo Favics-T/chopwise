@@ -1,13 +1,15 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+// import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import {BrowserRouter as Router, Routes,Route,Navigate } from 'react-router-dom'
 import { AppProvider } from './context/AppContext';
 import Onboarding from './pages/Onboarding';
 import Recipes from './pages/Recipes';
 import Pantry from './pages/Pantry';
-import RecipeDetail from './pages/RecipeDetail';
+import RecipeDetail from './pages/RecipeDetail'
 import Journal from './pages/Journal';
 import PantrySetup from './pages/PantrySetup';
-import ReceiptScan from './pages/ReceiptScan';
+import ReceiptScan from './pages/RecieptScan'
+// import ReceiptScan from './pages/ReceiptScan';
 import Settings from './pages/Settings';
 
 export default function App() {
