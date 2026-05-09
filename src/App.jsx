@@ -1,21 +1,22 @@
 import React from 'react';
-// import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import {BrowserRouter as Router, Routes,Route,Navigate } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { AppProvider } from './context/AppContext';
 import Onboarding from './pages/Onboarding';
 import Recipes from './pages/Recipes';
 import Pantry from './pages/Pantry';
-import RecipeDetail from './pages/RecipeDetail'
+import RecipeDetail from './pages/RecipeDetail';
 import Journal from './pages/Journal';
 import PantrySetup from './pages/PantrySetup';
-import ReceiptScan from './pages/RecieptScan'
+import RecieptScan from './pages/RecieptScan'
+
 // import ReceiptScan from './pages/ReceiptScan';
 import Settings from './pages/Settings';
+import UsageConfirmation from './pages/UsageConfirmation';
 
 export default function App() {
   return (
     <AppProvider>
-      <div className="min-h-screen max-w-[430px] mx-auto relative bg-background overflow-x-hidden">
+      <div className="min-h-screen max-w-107.5 mx-auto relative bg-background overflow-x-hidden">
         <Router>
           <Routes>
             <Route path="/" element={<Onboarding />} />
@@ -24,8 +25,9 @@ export default function App() {
             <Route path="/recipe-detail" element={<RecipeDetail />} />
             <Route path="/journal" element={<Journal />} />
             <Route path="/pantry-setup" element={<PantrySetup />} />
-            <Route path="/receipt-scan" element={<ReceiptScan />} />
+            <Route path="/receipt-scan" element={<RecieptScan />} />
             <Route path="/settings" element={<Settings />} />
+            <Route path="/usage-confirmation" element={<UsageConfirmation />} />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </Router>
