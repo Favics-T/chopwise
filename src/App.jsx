@@ -7,16 +7,14 @@ import Pantry from './pages/Pantry';
 import RecipeDetail from './pages/RecipeDetail';
 import Journal from './pages/Journal';
 import PantrySetup from './pages/PantrySetup';
-import RecieptScan from './pages/RecieptScan'
-
-// import ReceiptScan from './pages/ReceiptScan';
+import RecieptScan from './pages/RecieptScan';
 import Settings from './pages/Settings';
 import UsageConfirmation from './pages/UsageConfirmation';
 
 export default function App() {
   return (
     <AppProvider>
-      <div className="min-h-screen max-w- mx-auto relative bg-background overflow-x-hidden">
+      <div className="min-h-screen relative bg-background overflow-x-hidden">
         <Router>
           <Routes>
             <Route path="/" element={<Onboarding />} />
