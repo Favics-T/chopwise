@@ -1,6 +1,5 @@
 
 import React, { useState } from 'react';
-import Sidebar from '../components/Sidebar';
 import { 
   Bell, 
   Trash2, 
@@ -8,15 +7,16 @@ import {
   History, 
   TrendingUp, 
   Leaf,
-  
-  ChevronRight,
+    ChevronRight,
   Zap,
   
 } from 'lucide-react';
-import MetricCard from './Journal/MetricCard';
-import HistoryEntry from './Journal/HistoryEntry'
-import { useJournal } from '../hook/useJournal';
-import { journalStats } from '../data/mockdata';
+import MetricCard from './MetricCard';
+import HistoryEntry from './HistoryEntry'
+import { useJournal } from '../../hook/useJournal';
+import { journalStats } from '../../data/mockdata';
+import Sidebar from '../../components/Sidebar';
+
 
 export default function Journal() {
   const {  entries,  visibleEntries,

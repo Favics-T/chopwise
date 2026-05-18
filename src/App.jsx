@@ -5,11 +5,12 @@ import Onboarding from './pages/Onboarding';
 import Recipes from './pages/Recipes';
 import Pantry from './pages/Pantry';
 import RecipeDetail from './pages/RecipeDetail';
-import Journal from './pages/Journal';
+// import Journal from './pages/Journal';
 import PantrySetup from './pages/PantrySetup';
 import RecieptScan from './pages/RecieptScan';
 import Settings from './pages/Settings';
 import UsageConfirmation from './pages/UsageConfirmation';
+import Journal from './pages/Journal/Journal';
 
 export default function App() {
   return (
