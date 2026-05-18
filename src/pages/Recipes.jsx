@@ -202,7 +202,7 @@ export default function Recipes() {
 
           <div className="flex gap-6 overflow-x-auto no-scrollbar -mx-6 px-6">
             {/* Horizontal Card */}
-            <div className="min-w-[300px] bg-white rounded-2xl p-3 shadow-sm border border-outline-variant/30">
+            <div className="min-w-75 bg-white rounded-2xl p-3 shadow-sm border border-outline-variant/30">
               <div className="h-48 rounded-xl overflow-hidden mb-4 relative">
                 <img 
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbnolWAJz1aMD6pezs_VVxXu6LqZeQes54OccKATVcV5wOtFl5AcfyPVVBeg80bcWnZyX-6a_NEM6VtxPWwvZUmtW-CU_P6cnw6TdQG_ATqNf2CEt-TYntv9gqHqmJV9wUTYleYOnfH0Q4rrSWv6HIwNbjTjxgd90-oDx7olQ40diltHITYhJ_eAkq_o8Fur_kEejabqYOXK8BGOJxOyixNQsn140g8Z5Wdg2_HAIfDz9pdl4-OhWVI6QOHZjzGQzZXowjR0Efcdk" 
@@ -230,7 +230,7 @@ export default function Recipes() {
             </div>
 
             {/* Mock Extra Card */}
-            <div className="min-w-[300px] bg-white rounded-2xl p-3 shadow-sm border border-outline-variant/30 opacity-60">
+            <div className="min-w-75 bg-white rounded-2xl p-3 shadow-sm border border-outline-variant/30 opacity-60">
                <div className="h-48 rounded-xl bg-surface-container-low" />
                <div className="h-4 w-1/2 bg-surface-container-low mt-4 rounded" />
                <div className="h-4 w-1/3 bg-surface-container-low mt-2 rounded" />

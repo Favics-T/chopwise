@@ -16,7 +16,7 @@ import UsageConfirmation from './pages/UsageConfirmation';
 export default function App() {
   return (
     <AppProvider>
-      <div className="min-h-screen max-w-107.5 mx-auto relative bg-background overflow-x-hidden">
+      <div className="min-h-screen max-w- mx-auto relative bg-background overflow-x-hidden">
         <Router>
           <Routes>
             <Route path="/" element={<Onboarding />} />
