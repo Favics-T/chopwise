@@ -1,11 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { AppProvider } from './context/AppContext';
-import Onboarding from './pages/Onboarding';
+import Onboarding from './pages/Onboarding/Onboarding';
 import Recipes from './pages/Recipes';
 import Pantry from './pages/Pantry';
 import RecipeDetail from './pages/RecipeDetail';
-// import Journal from './pages/Journal';
 import PantrySetup from './pages/PantrySetup';
 import RecieptScan from './pages/RecieptScan';
 import Settings from './pages/Settings';
