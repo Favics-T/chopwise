@@ -100,3 +100,37 @@ export  const goals = [
     { id: 'Low Sugar',   icon: Droplets, title: 'Low Sugar',   description: 'Focus on low-GI complex carbohydrates.',         image: 'https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&q=80&w=800' },
     { id: 'Gluten-free', icon: Wheat,    title: 'Gluten-free', description: 'Traditional grains like fonio and millet.',      image: 'https://images.unsplash.com/photo-1505253149613-112d21d9f6a9?auto=format&fit=crop&q=80&w=800' },
   ];
+
+  export const ingredients = {
+     
+    FRESH: [
+      { name: "Tomatoes", image: "https://images.unsplash.com/photo-1546470427-e26264be0b0d?w=300&h=300&fit=crop&q=80" },
+      { name: "Red Peppers", image: "https://images.unsplash.com/photo-1592924357228-91a4daaafd7c?w=300&h=300&fit=crop&q=80" },
+      { name: "Eggplant", image: "https://images.unsplash.com/photo-1473001271688-dd2b35e0fd37?w=300&h=300&fit=crop&q=80" },
+      { name: "Spinach", image: "https://images.unsplash.com/photo-1576045057995-568f588f82fb?w=300&h=300&fit=crop&q=80" },
+      { name: "Plantains", image: "https://images.unsplash.com/photo-1528825871115-3581a5387919?w=300&h=300&fit=crop&q=80" },
+      { name: "Ginger", image: "https://images.unsplash.com/photo-1573401706955-47bb9a6d6b89?w=300&h=300&fit=crop&q=80" },
+      { name: "Onions", image: "https://images.unsplash.com/photo-1508747703725-719777637510?w=300&h=300&fit=crop&q=80" },
+      { name: "Okra", image: "https://images.unsplash.com/photo-1582515073490-39981397c445?w=300&h=300&fit=crop&q=80" },
+    ],
+    GRAINS: [
+      { name: "Long Grain Rice", image: "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=300&h=300&fit=crop&q=80" },
+      { name: "Egusi Seeds", image: "https://images.unsplash.com/photo-1612548403247-aa2873e9422d?w=300&h=300&fit=crop&q=80" },
+      { name: "Oats", image: "https://images.unsplash.com/photo-1614961908502-e90d5e5d0baa?w=300&h=300&fit=crop&q=80" },
+      { name: "Semolina", image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=300&h=300&fit=crop&q=80" },
+      { name: "Garri", image: "https://images.unsplash.com/photo-1506084868230-bb9d95c24759?w=300&h=300&fit=crop&q=80" },
+    ],
+    SPICES: [
+      { name: "Curry Powder", image: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=300&h=300&fit=crop&q=80" },
+      { name: "Thyme", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&h=300&fit=crop&q=80" },
+      { name: "Black Pepper", image: "https://images.unsplash.com/photo-1614977645540-7abd88ba8e14?w=300&h=300&fit=crop&q=80" },
+      { name: "Coriander", image: "https://images.unsplash.com/photo-1621264448270-9ef00e88a935?w=300&h=300&fit=crop&q=80" },
+    ],
+    OTHERS: [
+      { name: "Vegetable Oil", image: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=300&h=300&fit=crop&q=80" },
+      { name: "Bouillon Cubes", image: "https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?w=300&h=300&fit=crop&q=80" },
+      { name: "Salt", image: "https://images.unsplash.com/photo-1518110925495-5fe2fda0442c?w=300&h=300&fit=crop&q=80" },
+      { name: "Sugar", image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=300&h=300&fit=crop&q=80" },
+    ]
+  
+  };

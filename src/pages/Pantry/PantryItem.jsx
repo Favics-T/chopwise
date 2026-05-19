@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const PantryItem = ({ image, name, status, amount, isExpiringSoon }) => (
+ const PantryItem = ({ image, name, status, amount, isExpiringSoon }) => (
   <div className={`bg-white p-4 rounded-xl shadow-sm border-l-4 flex items-center justify-between mb-3 ${
     isExpiringSoon ? 'border-secondary' : 'border-transparent'
   }`}>
@@ -21,3 +21,5 @@ const PantryItem = ({ image, name, status, amount, isExpiringSoon }) => (
     </div>
   </div>
 );
+
+export default PantryItem;

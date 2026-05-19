@@ -5,7 +5,7 @@ import Onboarding from './pages/Onboarding/Onboarding';
 import Recipes from './pages/Recipes';
 import Pantry from './pages/Pantry/Pantry';
 import RecipeDetail from './pages/RecipeDetail';
-import PantrySetup from './pages/PantrySetup';
+import PantrySetup from './pages/PantrySetup/PantrySetup.jsx';
 import RecieptScan from './pages/RecieptScan';
 import Settings from './pages/Settings';
 import UsageConfirmation from './pages/UsageConfirmation';

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { 
   X, 
@@ -44,7 +43,7 @@ export default function ReceiptScan() {
           alt="Receipt Scan Background" 
           className="w-full h-full object-cover opacity-50 grayscale"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/60" />
+        <div className="absolute inset-0 bg-linear-to-t from-black via-transparent to-black/60" />
       </div>
 
       {/* Scanning UI Overlays */}
@@ -67,7 +66,7 @@ export default function ReceiptScan() {
           <motion.div 
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            className="w-full aspect-[3/4] border-2 border-primary/50 rounded-2xl relative shadow-[0_0_50px_rgba(30,123,73,0.3)]"
+            className="w-full aspect-3/4 border-2 border-primary/50 rounded-2xl relative shadow-[0_0_50px_rgba(30,123,73,0.3)]"
           >
             {/* Corner Accents */}
             <div className="absolute -top-1 -left-1 w-8 h-8 border-t-4 border-l-4 border-primary rounded-tl-xl" />
@@ -79,7 +78,7 @@ export default function ReceiptScan() {
             <motion.div 
               animate={{ top: ['0%', '100%', '0%'] }}
               transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-              className="absolute left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent shadow-[0_0_15px_#1e7b49] z-20"
+              className="absolute left-0 right-0 h-1 bg-linear-to-r from-transparent via-primary to-transparent shadow-[0_0_15px_#1e7b49] z-20"
             />
             
             {/* Viewfinder Text */}
@@ -120,7 +119,7 @@ export default function ReceiptScan() {
       </div>
 
       {/* Audio Wave Visualizer Simulation */}
-      <div className="absolute bottom-0 left-0 right-0 h-2 bg-primary/20 flex gap-[1px]">
+      <div className="absolute bottom-0 left-0 right-0 h-2 bg-primary/20 flex gap-px">
         {[...Array(100)].map((_, i) => (
           <motion.div 
             key={i}
