@@ -1,6 +1,7 @@
 import { Check } from 'lucide-react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { motion } from 'motion/react';
 
 const IngredientCard = ({ image, name, isSelected, onToggle }) => (
   <button 

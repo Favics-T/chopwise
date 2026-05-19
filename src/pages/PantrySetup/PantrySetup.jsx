@@ -14,7 +14,7 @@ import {
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { useAppContext } from '../../context/AppContext';
-import ingredients from '../../data/mockdata';
+import { ingredients as mockIngredients } from '../../data/mockdata';
 import IngredientCard from './IngredientCard';
 
 const categories = ["FRESH", "GRAINS", "SPICES", "OTHERS"];
@@ -34,9 +34,7 @@ export default function PantrySetup() {
   const [customName, setCustomName] = useState('');
 
   // All built-in ingredients per tab
-  const [ingredients, setIngredients] = useState(
-   
-);
+  const [ingredients, setIngredients] = useState(mockIngredients);
 
   const toggleItem = (name) => {
     setSelectedItems(prev => 

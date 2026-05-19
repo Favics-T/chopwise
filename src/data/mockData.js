@@ -134,3 +134,12 @@ export  const goals = [
     ]
   
   };
+
+ export const MOCK_DETECTED = [
+  { id: 1, name: '12 Farm Eggs', status: 'Detected', type: 'Protein' },
+  { id: 2, name: '1kg Basmati Rice', status: 'Waste Risk', type: 'Grains' },
+  { id: 3, name: 'Fresh Spinach', status: 'Detected', type: 'Vegetables' },
+  { id: 4, name: '500ml Olive Oil', status: 'Detected', type: 'Oil' },
+  { id: 5, name: 'Red Onions', status: 'Waste Risk', type: 'Vegetables' },
+];
+
