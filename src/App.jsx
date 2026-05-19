@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { AppProvider } from './context/AppContext';
 import Onboarding from './pages/Onboarding/Onboarding';
-import Recipes from './pages/Recipes';
+import Recipes from './pages/Recipes/Recipes.jsx';
 import Pantry from './pages/Pantry/Pantry';
 import RecipeDetail from './pages/RecipeDetail/RecipeDetail';
 import PantrySetup from './pages/PantrySetup/PantrySetup.jsx';

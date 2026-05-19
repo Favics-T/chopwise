@@ -1,6 +1,5 @@
 import React, { createContext, useReducer, useContext } from 'react';
 import { journalEntries, pantryItems } from '../data/mockdata.js';
-// import { pantryItems, journalEntries } from '../pages/data/mockData.js'
 
 
 const AppContext = createContext();

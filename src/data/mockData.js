@@ -144,6 +144,8 @@ export  const goals = [
 ];
 
 export const ingredientsList = [
+
+
     { name: 'Long-grain Parboiled Rice', amount: '3 Cups' },
     { name: 'Red Bell Peppers (Tatashe)', amount: '3 Large' },
     { name: 'Plum Tomatoes', amount: '5 Medium' },
@@ -175,4 +177,61 @@ export const ingredientsList = [
       description: 'Turn up the heat for the last 2-3 minutes to get that smoky \'bottom burn\' aroma. Stir in butter and fresh onion rings. Fluff with a fork and serve hot.'
     }
   ];
+
+  export const ALL_RECIPES = [
+  {
+    image: 'https://images.unsplash.com/photo-1574484284002-952d92456975?auto=format&fit=crop&q=80&w=800',
+    title: 'Smoky Party Jollof Rice',
+    category: 'Dinner',
+    time: '45m',
+    level: 'Medium',
+    isMatch: true,
+    comment: 'Uses your expiring bell peppers and scotch bonnets.',
+  },
+  {
+    image: 'https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&q=80&w=800',
+    title: 'Egusi Soup with Spinach',
+    category: 'Dinner',
+    time: '60m',
+    level: 'Hard',
+    isMatch: false,
+    comment: 'High in protein and perfect for meal prepping.',
+  },
+  {
+    image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=800',
+    title: 'Garden Harvest Bowl',
+    category: 'Lunch',
+    time: '20m',
+    level: 'Easy',
+    isMatch: true,
+    comment: 'Quick lunch option with your current stock.',
+  },
+  {
+    image: 'https://images.unsplash.com/photo-1481833761820-0509d3217039?auto=format&fit=crop&q=80&w=800',
+    title: 'Gizdodo Breakfast',
+    category: 'Breakfast',
+    time: '15m',
+    level: 'Easy',
+    isMatch: true,
+    comment: 'Uses those overripe plantains.',
+  },
+  {
+    image: 'https://images.unsplash.com/photo-1529042410759-befb1204b468?auto=format&fit=crop&q=80&w=800',
+    title: 'Beef Suya Skewers',
+    category: 'Quick Bites',
+    time: '30m',
+    level: 'Medium',
+    isMatch: false,
+    comment: 'Classic spicy street food at home.',
+  },
+  {
+    image: 'https://images.unsplash.com/photo-1505275350441-83dcda8eeef5?auto=format&fit=crop&q=80&w=800',
+    title: 'Puff Puff Dessert',
+    category: 'Desserts',
+    time: '25m',
+    level: 'Easy',
+    isMatch: false,
+    comment: 'Sweet fried dough – a Nigerian classic treat.',
+  },
+];
 
