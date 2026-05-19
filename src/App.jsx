@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { AppProvider } from './context/AppContext';
 import Onboarding from './pages/Onboarding/Onboarding';
 import Recipes from './pages/Recipes';
-import Pantry from './pages/Pantry';
+import Pantry from './pages/Pantry/Pantry';
 import RecipeDetail from './pages/RecipeDetail';
 import PantrySetup from './pages/PantrySetup';
 import RecieptScan from './pages/RecieptScan';
