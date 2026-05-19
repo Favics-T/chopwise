@@ -12,7 +12,7 @@
       className="flex items-center justify-between p-5 bg-white/10 backdrop-blur-xl rounded-2xl border border-white/20 mb-4 hover:shadow-xl hover:bg-white/20 transition-all"
     >
       {editMode ? (
-        // Fix: inline editing when "Edit All" is toggled
+        //  inline editing when "Edit All" is toggled
         <input
           value={editValue}
           onChange={e => setEditValue(e.target.value)}
@@ -34,7 +34,7 @@
           {status === 'Detected' ? <CheckCircle2 size={14} /> : <AlertCircle size={14} />}
           {status}
         </div>
-        {/* Fix: remove button visible in edit mode */}
+        {/*  remove button visible in edit mode */}
         {editMode && (
           <button
             onClick={() => onRemove(id)}

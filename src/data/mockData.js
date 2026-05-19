@@ -143,3 +143,36 @@ export  const goals = [
   { id: 5, name: 'Red Onions', status: 'Waste Risk', type: 'Vegetables' },
 ];
 
+export const ingredientsList = [
+    { name: 'Long-grain Parboiled Rice', amount: '3 Cups' },
+    { name: 'Red Bell Peppers (Tatashe)', amount: '3 Large' },
+    { name: 'Plum Tomatoes', amount: '5 Medium' },
+    { name: 'Scotch Bonnet (Atarodo)', amount: '2-3 Small' },
+    { name: 'Chicken or Beef Stock', amount: '4 Cups' },
+    { name: 'Vegetable Oil', amount: '1/2 Cup' },
+    { name: 'Tomato Paste', amount: '150g' }
+  ];
+
+  export   const steps = [
+    {
+      title: 'The Base Blend',
+      description: 'Blend the bell peppers, tomatoes, onions, and scotch bonnets until smooth. Pour into a pot and boil down until the water evaporates and you\'re left with a thick paste.'
+    },
+    {
+      title: 'Fry the Paste',
+      description: 'Heat oil in a large pot. Add sliced onions and fry until translucent. Stir in the tomato paste and fry for 5 minutes. Add your boiled pepper mix and fry until the oil starts to separate from the sauce.'
+    },
+    {
+      title: 'Seasoning',
+      description: 'Add curry powder, thyme, bay leaves, and bouillon cubes. Pour in the stock. Season with salt and pepper to taste. The liquid should be slightly saltier than you want the rice to be.'
+    },
+    {
+      title: 'The Rice Steam',
+      description: 'Add the washed rice. The liquid level should be just above the rice. Cover tightly with foil then the pot lid. Cook on very low heat for 30 minutes until the rice is tender and has absorbed all the liquid.'
+    },
+    {
+      title: 'The Finish',
+      description: 'Turn up the heat for the last 2-3 minutes to get that smoky \'bottom burn\' aroma. Stir in butter and fresh onion rings. Fluff with a fork and serve hot.'
+    }
+  ];
+
