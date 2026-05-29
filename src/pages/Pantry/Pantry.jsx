@@ -9,13 +9,14 @@ import {
 import { useNavigate } from 'react-router-dom';
 import PantryItem from './PantryItem';
 
-
 export default function Pantry() {
   const navigate = useNavigate();
+
   return (
-  <div className="min-h-screen bg-background pb-32">
-      {/* Top Header */}
-      <header className="sticky top-0 w-full z-40 bg-surface-container-low/95 backdrop-blur-sm shadow-sm px-6 py-4 flex justify-between items-center">
+    <div className="min-h-screen bg-background pb-32">
+
+      {/* ── Header ── */}
+      <header className="sticky top-0 w-full z-40 bg-surface-container-low/95 backdrop-blur-sm border-b border-outline-variant/10 px-6 py-4 flex justify-between items-center">
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-full bg-primary-container overflow-hidden border-2 border-white shadow-sm">
             <img 
@@ -27,42 +28,43 @@ export default function Pantry() {
           <h1 className="font-display text-xl font-bold text-primary">ChopWise</h1>
         </div>
         <button className="p-2.5 rounded-full hover:bg-surface-container transition-colors text-primary relative">
-          <Bell size={24} />
+          <Bell size={22} />
           <span className="absolute top-2 right-2 w-2 h-2 bg-secondary rounded-full border-2 border-white" />
         </button>
       </header>
 
-      <main className="px-6 pt-6">
-        {/* Statistics Widgets */}
-        <section className="grid grid-cols-2 gap-4 mb-8">
-          <div className="bg-surface-container-high p-5 rounded-2xl flex flex-col justify-between h-32 shadow-sm">
-            <span className="text-on-surface-variant text-xs font-bold uppercase tracking-wider">Pantry Items</span>
-            <span className="text-[40px] font-display font-bold text-primary leading-tight">42</span>
+      <main className="px-6 pt-6 max-w-lg mx-auto">
+
+        {/* ── Stats ── */}
+        <section className="grid grid-cols-2 gap-3 mb-8">
+          <div className="bg-surface-container-high p-5 rounded-2xl flex flex-col justify-between h-28 shadow-sm border border-outline-variant/10">
+            <span className="text-on-surface-variant text-[10px] font-black uppercase tracking-widest">Pantry Items</span>
+            <span className="text-[44px] font-display font-bold text-primary leading-none">42</span>
           </div>
-          <div className="bg-secondary-container p-5 rounded-2xl flex flex-col justify-between h-32 shadow-md">
-            <span className="text-on-secondary-container text-xs font-bold uppercase tracking-wider">Waste Saved</span>
-            <span className="text-[40px] font-display font-bold text-on-secondary-container leading-tight">1.2kg</span>
+          <div className="bg-secondary-container p-5 rounded-2xl flex flex-col justify-between h-28 shadow-sm">
+            <span className="text-on-secondary-container text-[10px] font-black uppercase tracking-widest">Waste Saved</span>
+            <span className="text-[44px] font-display font-bold text-on-secondary-container leading-none">1.2kg</span>
           </div>
         </section>
 
-        {/* Search Bar */}
-        <section className="mb-10 relative">
-          <div className="bg-white border-2 border-outline-variant/30 rounded-2xl px-5 py-4 flex items-center gap-3 shadow-[0_2px_8px_rgba(0,0,0,0.03)] focus-within:border-primary transition-all">
-            <Search className="text-outline" size={20} />
+        {/* ── Search ── */}
+        <section className="mb-8">
+          <div className="bg-white border border-outline-variant/20 rounded-2xl px-5 py-3.5 flex items-center gap-3 shadow-sm focus-within:border-primary focus-within:ring-4 focus-within:ring-primary/8 transition-all">
+            <Search className="text-outline shrink-0" size={18} />
             <input 
               type="text" 
               placeholder="Search ingredients..." 
-              className="bg-transparent border-none p-0 focus:ring-0 w-full font-sans text-sm font-medium"
+              className="bg-transparent border-none p-0 focus:ring-0 w-full text-sm font-medium"
             />
-            <Filter className="text-outline cursor-pointer hover:text-primary transition-colors" size={20} />
+            <Filter className="text-outline shrink-0 cursor-pointer hover:text-primary transition-colors" size={18} />
           </div>
         </section>
 
-        {/* Proteins Section */}
-        <section className="mb-10">
+        {/* ── Proteins ── */}
+        <section className="mb-9">
           <div className="flex justify-between items-center mb-4">
             <h2 className="font-display text-2xl font-bold">Proteins</h2>
-            <span className="text-xs font-bold text-on-surface-variant uppercase tracking-widest">5 items</span>
+            <span className="text-[10px] font-black text-on-surface-variant uppercase tracking-widest bg-surface-container-high px-3 py-1 rounded-full">5 items</span>
           </div>
           <PantryItem 
             image="https://lh3.googleusercontent.com/aida-public/AB6AXuCJuSuU9oq28RaZJ9rz48QgIi-tiQrxqFg_w1y5liqtXb2EVHfYosSQwwE438RFDJjlTB68HY5nIMiaY2rf-fNggRSD0DQgyAE0GUmoPXK1QVYWqK8wlqA2EbWuKmjSXK7J5t6IS9jRHsMbwHLp2YYXPa9uj_OrOPtPA9qXq4AjW2ccdRqWte-idx-LgbY5kln17rU8HrmGR2CvqHOr1_i_nxW201QRFkZBiteHqj5NyWgPDxd2IzCe3-pjFr6JxwG7YFfw-AvVZow"
@@ -79,11 +81,11 @@ export default function Pantry() {
           />
         </section>
 
-        {/* Grains Section */}
-        <section className="mb-10">
+        {/* ── Grains ── */}
+        <section className="mb-9">
           <div className="flex justify-between items-center mb-4">
             <h2 className="font-display text-2xl font-bold">Grains</h2>
-            <span className="text-xs font-bold text-on-surface-variant uppercase tracking-widest">3 items</span>
+            <span className="text-[10px] font-black text-on-surface-variant uppercase tracking-widest bg-surface-container-high px-3 py-1 rounded-full">3 items</span>
           </div>
           <PantryItem 
             image="https://lh3.googleusercontent.com/aida-public/AB6AXuCuZZHi2QBmMVepX-S7M6GjOPGirW-a_MTw66LyS_Arsw15HHQOvt8B0tR7bDXeEfiHieIu8LKyvut66N7jC8fm-JfnyqwVQTjyt0XQewEAdxEU57VcQv-WIGHVA0ub3ARnIpiFX3wtP2dBdHYj91fxqY6Jx1rMhNZho7D3Fk6mS8uJ-eV86P5gkvz5td5dogh63iMfJqpQpdJKuNNXYey_UU9ff5MfuIzib6kD2PhUGMWJqmNYWGvKif73S5OxzOI5s6Jw5nBuOyM"
@@ -93,25 +95,25 @@ export default function Pantry() {
           />
         </section>
 
-        {/* Vegetables Highlights Section */}
+        {/* ── Vegetables highlight card ── */}
         <section className="mb-12">
-          <div className="flex justify-between items-center mb-4 text-on-surface">
+          <div className="flex justify-between items-center mb-4">
             <h2 className="font-display text-2xl font-bold">Vegetables</h2>
-            <span className="text-xs font-bold text-on-surface-variant uppercase tracking-widest">8 items</span>
+            <span className="text-[10px] font-black text-on-surface-variant uppercase tracking-widest bg-surface-container-high px-3 py-1 rounded-full">8 items</span>
           </div>
-          
-          <div className="bg-[#E9F3EE] p-6 rounded-2xl border border-primary/10 relative overflow-hidden group">
-            <div className="flex justify-between items-start">
-              <div className="flex-1 pr-4">
-                <span className="bg-secondary-container text-on-secondary-container text-[9px] font-black uppercase tracking-[0.2em] px-2.5 py-1 rounded inline-block mb-3">
+
+          <div className="bg-[#E9F3EE] p-5 rounded-2xl border border-primary/10 relative overflow-hidden group hover:shadow-md transition-all duration-200">
+            <div className="flex justify-between items-start gap-4">
+              <div className="flex-1">
+                <span className="bg-secondary-container text-on-secondary-container text-[9px] font-black uppercase tracking-[0.2em] px-2.5 py-1 rounded-lg inline-block mb-3">
                   Urgent
                 </span>
-                <h3 className="font-display text-2xl font-bold text-primary mb-2">Spinach Leaves</h3>
-                <p className="text-on-surface-variant text-sm leading-relaxed mb-6">
+                <h3 className="font-display text-xl font-bold text-primary mb-1.5 leading-tight">Spinach Leaves</h3>
+                <p className="text-on-surface-variant text-sm leading-relaxed mb-5">
                   Use today for an AI-suggested Efo Riro to avoid waste.
                 </p>
               </div>
-              <div className="w-24 h-24 rounded-2xl overflow-hidden shadow-lg transform rotate-3 group-hover:rotate-0 transition-transform">
+              <div className="w-20 h-20 rounded-2xl overflow-hidden shadow-lg transform rotate-3 group-hover:rotate-0 transition-transform duration-300 shrink-0">
                 <img 
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIu6WlMXRniNgWwi-tleYMYBvYEGrJmzfUGjMwgS5i5S96cx9-e5Cqm9mKna2aXVxRinwVH7YLYqej2XXrWUr8fpg8V3y0cnbesr1k3Xpg7hKSryKNShAvhpGzg52B2zYKKKLCRtRd1laCMdCnoEnuiZhPa6AVDHTqBzDWiVNubwDbIbOW4I6WTC-aX16yeytBuyi2SqjpyS8TH8RzDYLsLpipm2M1_dR09tVR5O-d2ki_Lhzl3LpTu7E_DpcMVx1MX41_4oSEc4Y" 
                   alt="Spinach" 
@@ -119,20 +121,21 @@ export default function Pantry() {
                 />
               </div>
             </div>
-            
+
             <button 
               onClick={() => navigate('/recipe-detail')}
-              className="w-full bg-primary text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-primary-container transition-all active:scale-95 shadow-md"
+              className="w-full bg-primary text-white py-3.5 rounded-xl font-bold text-sm flex items-center justify-center gap-2 hover:bg-primary/90 transition-all active:scale-95 shadow-md shadow-primary/20"
             >
-              <Utensils size={18} /> Get AI Recipe
+              <Utensils size={16} /> Get AI Recipe
             </button>
           </div>
         </section>
+
       </main>
 
-      {/* FAB */}
-      <button className="fixed bottom-28 right-6 w-16 h-16 bg-secondary-container text-on-secondary-container rounded-full shadow-xl flex items-center justify-center hover:scale-105 active:scale-90 transition-transform z-50">
-        <Plus size={32} strokeWidth={3} />
+      {/* ── FAB ── */}
+      <button className="fixed bottom-28 right-6 w-14 h-14 bg-secondary-container text-on-secondary-container rounded-full shadow-xl shadow-black/15 flex items-center justify-center hover:scale-105 active:scale-90 transition-transform z-50">
+        <Plus size={28} strokeWidth={2.5} />
       </button>
 
     </div>
