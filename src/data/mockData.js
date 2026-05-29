@@ -1,7 +1,6 @@
 import { Activity, Trash2,Leaf,Dumbbell,Flame,Utensils,
   Sprout, Droplets,TrendingUp,Zap,Heart,Wheat,Weight
  } from "lucide-react";
-import { progress } from "motion";
 
 export const pantryItems= [
     { id: 1, name: 'Red Bell Peppers', qty: 3, unit: 'Large', status: 'Expiring Soon', expiry: 'Oct 26', image: 'https://images.unsplash.com/photo-1592924357228-91a4daaafd7c?w=100&h=100&fit=crop', isExpiringSoon: true },

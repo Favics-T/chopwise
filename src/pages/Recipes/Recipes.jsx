@@ -16,7 +16,8 @@ import BottomNav from '../../components/BottomNav';
 import { useNavigate } from 'react-router-dom';
 import { ALL_RECIPES } from '../../data/mockData';
 import RecipeCard from './RecipeCard';
-import { useRecipe } from '../../hook/useRecipe';
+import { useRecipe} from '../../hook/useRecipe';
+import { useRecipeFilters } from '../../hook/useRecipeFilter';
 import Header from './Header';
 
 
@@ -35,7 +36,7 @@ export default function Recipes() {
   sortByMatch,
 } = useRecipe();
 
-const {visibleRecipe} = useRecipeFilters();
+const {visibleRecipe} = useRecipeFilters()
   
   return (
     <div className="min-h-screen bg-[#F7FBF7] flex">
@@ -70,8 +71,8 @@ const {visibleRecipe} = useRecipeFilters();
           {/* : Recipes grid now uses the filtered list */}
           {visibleRecipes.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10">
-              {visibleRecipes.map((recipe, i) => (
-                <RecipeCard key={i} {...recipe} />
+              {visibleRecipes.map((recipe) => (
+                <RecipeCard key={recipe.title} {...recipe} />
               ))}
               
               <div
@@ -102,7 +103,7 @@ const {visibleRecipe} = useRecipeFilters();
         </main>
       </div>
 
-      <BottomNav />
+      {/* <BottomNav /> */}
     </div>
   );
 }

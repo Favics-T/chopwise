@@ -1,5 +1,6 @@
 import { createContext, useContext, useState } from 'react';
-import { ALL_RECIPES } from '../data/mockData';
+// import { ALL_RECIPES } from '../../data/mockData';
+import { ALL_RECIPES } from '../data/mockData'
 import { useNavigate } from 'react-router-dom';
 
 const RecipeContext = createContext();
