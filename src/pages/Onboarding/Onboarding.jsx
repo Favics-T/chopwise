@@ -23,12 +23,12 @@ function ProgressDots({ step }) {
   );
 }
 
-// ── Goal card for the 2×2 grid ───────────────────────────────────────────────
-function GoalTile({ id, title, description, image, isSelected, onClick }) {
+// ── Goal card — single-column horizontal row ─────────────────────────────────
+function GoalTile({ id, title, description, isSelected, onClick }) {
   return (
     <button
       onClick={() => onClick(id)}
-      className="relative rounded-[1.25rem] overflow-hidden text-left transition-all duration-300 focus:outline-none"
+      className="w-full flex items-center gap-4 text-left transition-all duration-300 focus:outline-none px-4 py-4 rounded-2xl"
       style={{
         border: isSelected
           ? '1.5px solid #4ade80'
@@ -36,22 +36,12 @@ function GoalTile({ id, title, description, image, isSelected, onClick }) {
         background: isSelected
           ? 'rgba(74,222,128,0.10)'
           : 'rgba(255,255,255,0.04)',
-        transform: isSelected ? 'translateY(-2px)' : 'translateY(0)',
+        transform: isSelected ? 'translateY(-1px)' : 'translateY(0)',
       }}
     >
-      {/* food image strip */}
-      <div className="h-16 overflow-hidden">
-        <img
-          src={image}
-          alt={title}
-          className="w-full h-full object-cover transition-transform duration-700"
-          style={{ opacity: isSelected ? 0.9 : 0.55 }}
-        />
-      </div>
-
       {/* check bubble */}
       <div
-        className="absolute top-2 right-2 w-5 h-5 rounded-full flex items-center justify-center transition-all duration-200"
+        className="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center transition-all duration-200"
         style={{
           background: isSelected ? '#4ade80' : 'rgba(0,0,0,0.35)',
           border: isSelected
@@ -64,7 +54,7 @@ function GoalTile({ id, title, description, image, isSelected, onClick }) {
         )}
       </div>
 
-      <div className="px-3 pt-2.5 pb-3">
+      <div className="flex-1 min-w-0">
         <p
           className="text-sm font-semibold leading-snug"
           style={{ color: isSelected ? '#e8f5ea' : '#c4dfc8' }}
@@ -75,16 +65,25 @@ function GoalTile({ id, title, description, image, isSelected, onClick }) {
           {description}
         </p>
       </div>
+
+      {isSelected && (
+        <div
+          className="flex-shrink-0 text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full"
+          style={{ background: 'rgba(74,222,128,0.15)', color: '#4ade80' }}
+        >
+          Selected
+        </div>
+      )}
     </button>
   );
 }
 
-// ── Restriction card for the 3-col grid ──────────────────────────────────────
-function RestrictionTile({ id, title, description, image, isChecked, onToggle }) {
+// ── Restriction pill — text only, no image ────────────────────────────────────
+function RestrictionTile({ id, title, description, isChecked, onToggle }) {
   return (
     <button
       onClick={() => onToggle(id)}
-      className="relative rounded-[0.875rem] overflow-hidden text-left transition-all duration-200 focus:outline-none"
+      className="w-full flex items-center gap-3 text-left transition-all duration-200 focus:outline-none px-4 py-3 rounded-xl"
       style={{
         border: isChecked
           ? '1.5px solid #4ade80'
@@ -95,16 +94,9 @@ function RestrictionTile({ id, title, description, image, isChecked, onToggle })
         transform: isChecked ? 'translateY(-1px)' : 'translateY(0)',
       }}
     >
-      <img
-        src={image}
-        alt={title}
-        className="w-full h-14 object-cover block"
-        style={{ opacity: isChecked ? 0.85 : 0.55 }}
-      />
-
       {/* check bubble */}
       <div
-        className="absolute top-1.5 right-1.5 w-4 h-4 rounded-full flex items-center justify-center transition-all duration-200"
+        className="flex-shrink-0 w-4 h-4 rounded-full flex items-center justify-center transition-all duration-200"
         style={{
           background: isChecked ? '#4ade80' : 'rgba(0,0,0,0.4)',
           border: isChecked
@@ -117,7 +109,7 @@ function RestrictionTile({ id, title, description, image, isChecked, onToggle })
         )}
       </div>
 
-      <div className="px-2.5 pt-2 pb-2.5">
+      <div className="flex-1 min-w-0">
         <p
           className="text-xs font-semibold leading-snug"
           style={{ color: isChecked ? '#e8f5ea' : '#c4dfc8' }}
@@ -224,7 +216,7 @@ export default function Onboarding() {
         >
           Choose your primary goal
         </p>
-        <div className="grid grid-cols-2 gap-3">
+        <div className="flex flex-col gap-2.5">
           {goals.map(goal => (
             <GoalTile
               key={goal.id}
@@ -313,7 +305,7 @@ export default function Onboarding() {
 
       {/* Restriction grid */}
       <div className="flex-1 overflow-y-auto no-scrollbar px-5 lg:px-8 pt-4">
-        <div className="grid grid-cols-3 gap-2.5 mb-5">
+        <div className="flex flex-col gap-2 mb-5">
           {restrictions.map(r => (
             <RestrictionTile
               key={r.id}
