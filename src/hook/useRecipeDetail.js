@@ -55,7 +55,5 @@ const [checkedIngredients, setCheckedIngredients] = useState([]);
     setCheckedIngredients,
     toggleIngredient,
     handleShare
-
   }
-
 }

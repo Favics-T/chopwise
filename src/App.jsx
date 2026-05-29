@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { AppProvider } from './context/AppContext';
+import { RecipeProvider } from './context/RecipeContext.jsx';
 import Onboarding from './pages/Onboarding/Onboarding';
 import Recipes from './pages/Recipes/Recipes.jsx';
 import Pantry from './pages/Pantry/Pantry';
@@ -16,18 +17,20 @@ export default function App() {
     <AppProvider>
       <div className="min-h-screen relative bg-background overflow-x-hidden">
         <Router>
-          <Routes>
-            <Route path="/" element={<Onboarding />} />
-            <Route path="/recipes" element={<Recipes />} />
-            <Route path="/pantry" element={<Pantry />} />
-            <Route path="/recipe-detail" element={<RecipeDetail />} />
-            <Route path="/journal" element={<Journal />} />
-            <Route path="/pantry-setup" element={<PantrySetup />} />
-            <Route path="/receipt-scan" element={<RecieptScan />} />
-            <Route path="/settings" element={<Settings />} />
-            <Route path="/usage-confirmation" element={<UsageConfirmation />} />
-            <Route path="*" element={<Navigate to="/" />} />
-          </Routes>
+          <RecipeProvider>
+            <Routes>
+              <Route path="/" element={<Onboarding />} />
+              <Route path="/recipes" element={<Recipes />} />
+              <Route path="/pantry" element={<Pantry />} />
+              <Route path="/recipe-detail" element={<RecipeDetail />} />
+              <Route path="/journal" element={<Journal />} />
+              <Route path="/pantry-setup" element={<PantrySetup />} />
+              <Route path="/receipt-scan" element={<RecieptScan />} />
+              <Route path="/settings" element={<Settings />} />
+              <Route path="/usage-confirmation" element={<UsageConfirmation />} />
+              <Route path="*" element={<Navigate to="/" />} />
+            </Routes>
+          </RecipeProvider>
         </Router>
       </div>
     </AppProvider>
