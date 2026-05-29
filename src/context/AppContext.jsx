@@ -7,15 +7,14 @@ const AppContext = createContext();
 const initialState = {
   healthGoal: 'Healthier Eating',
   restrictions: ['Ulcer-safe'],
-  // User preferences tracked in global state
   notifications: true,
   units: 'Metric',
   theme: 'Light',
-  // Favourite recipes (by title)
   favouriteRecipes: [],
-   pantryItems,
-   journalEntries
-   };
+  preferredStores: [],
+  pantryItems,
+  journalEntries,
+};
 
 function reducer(state, action) {
   switch (action.type) {
@@ -91,9 +90,11 @@ function reducer(state, action) {
     case 'SET_UNITS':
       return { ...state, units: action.payload };
 
-    // Fix: Switch app theme
     case 'SET_THEME':
       return { ...state, theme: action.payload };
+
+    case 'SET_PREFERRED_STORES':
+      return { ...state, preferredStores: action.payload };
 
     default:
       return state;

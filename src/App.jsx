@@ -10,6 +10,7 @@ import PantrySetup from './pages/PantrySetup/PantrySetup.jsx';
 import RecieptScan from './pages/RecieptScan/RecieptScan.jsx';
 import Settings from './pages/Settings';
 import UsageConfirmation from './pages/UsageConfirmation';
+import StorePreferences from './pages/StorePreferences';
 import Journal from './pages/Journal/Journal';
 
 export default function App() {
@@ -28,6 +29,7 @@ export default function App() {
               <Route path="/receipt-scan" element={<RecieptScan />} />
               <Route path="/settings" element={<Settings />} />
               <Route path="/usage-confirmation" element={<UsageConfirmation />} />
+              <Route path="/store-preferences" element={<StorePreferences />} />
               <Route path="*" element={<Navigate to="/" />} />
             </Routes>
           </RecipeProvider>

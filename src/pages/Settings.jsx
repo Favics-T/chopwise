@@ -1,20 +1,23 @@
 import React from 'react';
-import { 
-  User, 
-  Target, 
-  HeartPulse, 
-  Bell, 
-  Moon, 
-  Ruler, 
-  HelpCircle, 
-  ShieldCheck, 
+import {
+  User,
+  Target,
+  HeartPulse,
+  Bell,
+  Moon,
+  Ruler,
+  HelpCircle,
+  ShieldCheck,
   LogOut,
-  ChevronRight
+  ChevronRight,
+  Store,
 } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import { useAppContext } from '../context/AppContext';
 import BottomNav from '../components/BottomNav';
 
-const SettingItem = ({ icon: Icon, label, value, colorClass = "text-on-surface-variant" }) => (
-  <button className="w-full flex items-center justify-between p-4 bg-white hover:bg-surface-container/50 transition-colors">
+const SettingItem = ({ icon: Icon, label, value, colorClass = "text-on-surface-variant", onClick }) => (
+  <button onClick={onClick} className="w-full flex items-center justify-between p-4 bg-white hover:bg-surface-container/50 transition-colors">
     <div className="flex items-center gap-4">
       <div className={`p-2 rounded-xl bg-surface-container-low ${colorClass}`}>
         <Icon size={20} />
@@ -35,6 +38,12 @@ const SectionHeader = ({ title }) => (
 );
 
 export default function Settings() {
+  const navigate = useNavigate();
+  const { state } = useAppContext();
+  const storeLabel = state.preferredStores.length > 0
+    ? state.preferredStores.slice(0, 2).join(', ') + (state.preferredStores.length > 2 ? '…' : '')
+    : 'None set';
+
   return (
     <div className="min-h-screen bg-background pb-32">
       {/* Header Profile Section */}
@@ -72,6 +81,13 @@ export default function Settings() {
           <SettingItem icon={Bell} label="Notifications" value="On" />
           <SettingItem icon={Moon} label="Dark Mode" value="System" />
           <SettingItem icon={Ruler} label="Measurement Units" value="Metric (kg/g)" />
+          <SettingItem
+            icon={Store}
+            label="Store Preferences"
+            value={storeLabel}
+            colorClass="text-secondary"
+            onClick={() => navigate('/store-preferences')}
+          />
         </div>
 
         {/* Support Section */}

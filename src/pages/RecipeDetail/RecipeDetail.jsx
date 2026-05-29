@@ -1,16 +1,19 @@
-import { 
-  ArrowLeft, 
-  Heart, 
-  Share2, 
-  Minus, 
-  Plus, 
-  Lightbulb, 
+import { useState } from 'react';
+import {
+  ArrowLeft,
+  Heart,
+  Share2,
+  Minus,
+  Plus,
+  Lightbulb,
   CheckCircle,
   Clock,
   Flame,
   ChefHat,
   Copy,
-  Check
+  Check,
+  ShoppingCart,
+  UtensilsCrossed,
 } from 'lucide-react';
 import { useRecipeDetail } from '../../hook/useRecipeDetail';
 import RecipeHeader from './RecipeHeader';
@@ -22,12 +25,14 @@ import PreparationStep from './PreparationStep';
 import MobileBottomBar from './MobileBottomBar';
 import NutritionGrid from './NutritionGrid';
 import RightHeader from './RightHeader';
+import ShoppingList from './ShoppingList';
 import { useNavigate } from 'react-router-dom';
 import { ingredientsList  } from '../../data/mockdata';
 
 const RECIPE_TITLE = 'Smoky Party Jollof Rice';
 
 export default function RecipeDetail() {
+  const [activeTab, setActiveTab] = useState('ingredients');
 
   const {
   servings,
@@ -40,7 +45,8 @@ export default function RecipeDetail() {
   checkedIngredients,
   toggleIngredient,
   clearIngredients,
-  goToUsageConfirmation
+  goToUsageConfirmation,
+  navigate,
 } = useRecipeDetail();
 
   return (
@@ -77,28 +83,60 @@ export default function RecipeDetail() {
           {/* Right Column Content */}
           <div className="lg:col-span-7 pb-12">
             <RightHeader />
-                        <MobileStats />
-            {/* Ingredients Section */}
-            <IngredientsList
-  ingredients={ingredientsList}
-  checkedIngredients={checkedIngredients}
-  toggleIngredient={toggleIngredient}
-  clearChecks={() => setCheckedIngredients([])} />         
-            <PreparationStep />
-            {/* Primary Action Desktop */}
-            <div className="mt-20 border-t border-outline-variant/20 pt-12 flex items-center justify-between gap-8">
-              <div>
-                <p className="text-[10px] font-black text-on-surface-variant uppercase tracking-widest mb-1 italic">Tired of thinking?</p>
-                <h4 className="font-display text-xl font-bold text-on-surface">Record your masterpiece</h4>
-              </div>
-              <button 
-                onClick={() => navigate('/usage-confirmation')}
-                className="bg-primary text-white py-5 px-12 rounded-[1.5rem] font-display text-xl font-bold flex items-center justify-center gap-4 hover:scale-[1.02] hover:shadow-2xl hover:shadow-primary/30 transition-all active:scale-95 shadow-xl shadow-primary/20"
+
+            {/* Tab bar */}
+            <div className="flex gap-2 mb-8 bg-surface-container/50 p-1.5 rounded-2xl w-fit">
+              <button
+                onClick={() => setActiveTab('ingredients')}
+                className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-bold transition-all ${
+                  activeTab === 'ingredients'
+                    ? 'bg-white text-primary shadow-sm'
+                    : 'text-on-surface-variant hover:text-on-surface'
+                }`}
               >
-                <CheckCircle size={28} />
-                I Cooked This
+                <UtensilsCrossed size={16} /> Ingredients
+              </button>
+              <button
+                onClick={() => setActiveTab('shopping')}
+                className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-bold transition-all ${
+                  activeTab === 'shopping'
+                    ? 'bg-white text-primary shadow-sm'
+                    : 'text-on-surface-variant hover:text-on-surface'
+                }`}
+              >
+                <ShoppingCart size={16} /> Shopping List
               </button>
             </div>
+
+            {activeTab === 'ingredients' && (
+              <>
+                <MobileStats />
+                {/* Ingredients Section */}
+                <IngredientsList
+                  ingredients={ingredientsList}
+                  checkedIngredients={checkedIngredients}
+                  toggleIngredient={toggleIngredient}
+                  clearChecks={() => setCheckedIngredients([])}
+                />
+                <PreparationStep />
+                {/* Primary Action Desktop */}
+                <div className="mt-20 border-t border-outline-variant/20 pt-12 flex items-center justify-between gap-8">
+                  <div>
+                    <p className="text-[10px] font-black text-on-surface-variant uppercase tracking-widest mb-1 italic">Tired of thinking?</p>
+                    <h4 className="font-display text-xl font-bold text-on-surface">Record your masterpiece</h4>
+                  </div>
+                  <button
+                    onClick={() => navigate('/usage-confirmation')}
+                    className="bg-primary text-white py-5 px-12 rounded-[1.5rem] font-display text-xl font-bold flex items-center justify-center gap-4 hover:scale-[1.02] hover:shadow-2xl hover:shadow-primary/30 transition-all active:scale-95 shadow-xl shadow-primary/20"
+                  >
+                    <CheckCircle size={28} />
+                    I Cooked This
+                  </button>
+                </div>
+              </>
+            )}
+
+            {activeTab === 'shopping' && <ShoppingList />}
           </div>
         </div>
       </main>

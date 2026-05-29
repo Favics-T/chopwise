@@ -1,30 +1,28 @@
 
 import React, { useState } from 'react';
-import { 
-  Bell, 
-  Trash2, 
-  Activity, 
-  History, 
-  TrendingUp, 
-  Leaf,
-    ChevronRight,
+import {
+  Bell,
+  Activity,
+  History,
+  TrendingUp,
+  ChevronRight,
   Zap,
-  
+  Plus,
 } from 'lucide-react';
 import MetricCard from './MetricCard';
-import HistoryEntry from './HistoryEntry'
+import HistoryEntry from './HistoryEntry';
+import FoodLogSheet from './FoodLogSheet';
+import WeeklyDigest from './WeeklyDigest';
+import PatternWarning from './PatternWarning';
 import { useJournal } from '../../hook/useJournal';
 import { journalStats } from '../../data/mockdata';
 import Sidebar from '../../components/Sidebar';
 
 
 export default function Journal() {
-  const {  entries,  visibleEntries,
-  showAll,
-  setShowAll,
-  deleteEntry
-} = useJournal();
+  const { entries, visibleEntries, showAll, setShowAll, deleteEntry } = useJournal();
   const [showNotif, setShowNotif] = useState(false);
+  const [showFoodLog, setShowFoodLog] = useState(false);
     // "View full report" handler shows a stats summary alert
   const handleViewReport = () => {
     alert(
@@ -124,6 +122,9 @@ export default function Journal() {
             </div>
           </section>
 
+          {/* Feature 3: AI weekly digest — collapsible "This Week" card */}
+          <WeeklyDigest />
+
           {/* History Timeline */}
           <section className="pb-20">
             <div className="flex items-center justify-between mb-12">
@@ -139,6 +140,9 @@ export default function Journal() {
                 </button>
             </div>
             
+            {/* Feature 4: excess/pattern warning banner */}
+            <PatternWarning />
+
             {entries.length === 0 ? (
               // Empty state – shown when all entries are deleted or none exist yet
               <div className="flex flex-col items-center justify-center py-20 text-center">
@@ -172,6 +176,17 @@ export default function Journal() {
           </section>
         </main>
       </div>
+
+      {/* Floating + FAB — log food eaten outside pantry */}
+      <button
+        onClick={() => setShowFoodLog(true)}
+        title="Log a meal"
+        className="fixed bottom-8 right-8 z-40 w-16 h-16 bg-secondary text-white rounded-full shadow-2xl shadow-secondary/40 flex items-center justify-center hover:scale-105 active:scale-95 transition-transform"
+      >
+        <Plus size={28} />
+      </button>
+
+      {showFoodLog && <FoodLogSheet onClose={() => setShowFoodLog(false)} />}
     </div>
   );
 }
