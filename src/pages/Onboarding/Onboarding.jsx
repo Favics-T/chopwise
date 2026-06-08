@@ -35,7 +35,7 @@ export default function Onboarding() {
     ...customRestrictionsList,
   ];
 
-  // ── Step 0: Goal ─────────────────────────────────────────────────────────
+  // Step 0: Goal
   const StepGoal = () => (
     <motion.div
       key="goal"
@@ -46,9 +46,9 @@ export default function Onboarding() {
       transition={{ duration: 0.3, ease: 'easeInOut' }}
     >
       {/* Header */}
-      <div className="flex-shrink-0 px-7 pt-7 pb-5">
+      <div className="shrink-0 px-7 pt-7 pb-5">
         <div className="flex items-center gap-2 mb-6">
-          <div className="w-[7px] h-[7px] rounded-full bg-[#4ade80]" />
+          <div className="w-1.75 h-1.75 rounded-full bg-[#4ade80]" />
           <span
             className="text-[11px] font-bold tracking-[0.2em] uppercase"
             style={{ color: 'rgba(255,255,255,0.35)' }}
@@ -98,7 +98,7 @@ export default function Onboarding() {
 
       {/* Footer */}
       <div
-        className="flex-shrink-0 px-7 pt-4 pb-7 flex items-center gap-3"
+        className="shrink-0 px-7 pt-4 pb-7 flex items-center gap-3"
         style={{ borderTop: '1px solid rgba(255,255,255,0.05)' }}
       >
         <button
@@ -139,9 +139,9 @@ export default function Onboarding() {
       transition={{ duration: 0.3, ease: 'easeInOut' }}
     >
       {/* Header */}
-      <div className="flex-shrink-0 px-7 pt-7 pb-5">
+      <div className="shrink-0 px-7 pt-7 pb-5">
         <div className="flex items-center gap-2 mb-6">
-          <div className="w-[7px] h-[7px] rounded-full bg-[#4ade80]" />
+          <div className="w-1.75 h-1.75 rounded-full bg-[#4ade80]" />
           <span
             className="text-[11px] font-bold tracking-[0.2em] uppercase"
             style={{ color: 'rgba(255,255,255,0.35)' }}
@@ -177,7 +177,7 @@ export default function Onboarding() {
 
       {/* Restrictions list */}
       <div className="flex-1 overflow-y-auto no-scrollbar px-7 pt-4 pb-2">
-        <div className="flex flex-col gap-[7px] mb-5">
+        <div className="flex flex-col gap-1.75 mb-5">
           {restrictions.map(r => (
             <RestrictionTile
               key={r.id}
@@ -283,7 +283,7 @@ export default function Onboarding() {
 
       {/* Footer */}
       <div
-        className="flex-shrink-0 px-7 pt-4 pb-7 flex items-center gap-3"
+        className="shrink-0 px-7 pt-4 pb-7 flex items-center gap-3"
         style={{ borderTop: '1px solid rgba(255,255,255,0.05)' }}
       >
         <button
@@ -313,7 +313,7 @@ export default function Onboarding() {
     </motion.div>
   );
 
-  // ── Step 2: Done ─────────────────────────────────────────────────────────
+  // ── Step 2: Done 
   const StepDone = () => (
     <motion.div
       key="done"
@@ -332,7 +332,7 @@ export default function Onboarding() {
         animate={{ scale: 1 }}
         transition={{ type: 'spring', damping: 14, delay: 0.1 }}
       >
-        🎉
+        
       </motion.div>
 
       <div>
@@ -346,7 +346,7 @@ export default function Onboarding() {
         >
           You're all set!
         </h2>
-        <p className="text-[13px] leading-relaxed max-w-[260px]" style={{ color: 'rgba(255,255,255,0.4)' }}>
+        <p className="text-[13px] leading-relaxed max-w-65" style={{ color: 'rgba(255,255,255,0.4)' }}>
           Your personalised ChopWise profile is ready. Time to stock your pantry.
         </p>
       </div>

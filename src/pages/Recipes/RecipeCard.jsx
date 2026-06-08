@@ -39,7 +39,7 @@ export default function RecipeCard({ image, title, category, time, level, commen
 
   return (
     <div
-      onClick={() => navigate('/recipe-detail')}
+      onClick={() => navigate('/recipe-detail', { state: { recipe: { image, title, category, time, level, comment, isMatch } } })}
       className="group bg-white rounded-4xl overflow-hidden shadow-sm hover:shadow-xl transition-all cursor-pointer border border-outline-variant/10 flex flex-col"
     >
       <div className="h-56 lg:h-64 relative overflow-hidden">

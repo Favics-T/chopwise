@@ -2,9 +2,7 @@ import { useState, useEffect } from 'react';
 import { CheckCircle2, ShoppingBag, Share2, Copy, Loader2 } from 'lucide-react';
 import { useAppContext } from '../../context/AppContext';
 import { callGemini } from '../../utils/gemini';
-import { ingredientsList } from '../../data/mockdata';
-
-const RECIPE_TITLE = 'Smoky Party Jollof Rice';
+import { useRecipeDetail } from '../../hook/useRecipeDetail';
 
 const mockPrices = {
   items: [
@@ -34,8 +32,9 @@ function findPrice(itemName, priceItems) {
   return priceItems.find(p => normName(p.name).includes(target));
 }
 
-export default function ShoppingList() {
+export default function ShoppingList({ ingredients }) {
   const { state } = useAppContext();
+  const { recipe } = useRecipeDetail();
   const [prices, setPrices] = useState(null);
   const [loadingPrices, setLoadingPrices] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -43,8 +42,8 @@ export default function ShoppingList() {
   const pantryItems = state.pantryItems ?? [];
   const preferredStore = state.preferredStores?.[0] ?? 'Local Market';
 
-  const inPantry  = ingredientsList.filter(i =>  isInPantry(i.name, pantryItems));
-  const needToBuy = ingredientsList.filter(i => !isInPantry(i.name, pantryItems));
+  const inPantry  = ingredients.filter(i =>  isInPantry(i.name, pantryItems));
+  const needToBuy = ingredients.filter(i => !isInPantry(i.name, pantryItems));
 
   useEffect(() => {
     if (needToBuy.length === 0) return;
@@ -69,7 +68,7 @@ export default function ShoppingList() {
     }).join('\n');
     const pantryLines = inPantry.map(i => `✓ ${i.name} (in pantry)`).join('\n');
     const totalLine = prices?.total ? `\nEstimated total: ${prices.total}` : '';
-    const text = `ChopWise Shopping List — ${RECIPE_TITLE}\n\nNeed to buy:\n${buyLines}${totalLine}\n\nAlready in pantry:\n${pantryLines}`;
+    const text = `ChopWise Shopping List — ${recipe.title}\n\nNeed to buy:\n${buyLines}${totalLine}\n\nAlready in pantry:\n${pantryLines}`;
 
     if (navigator.share) {
       try { await navigator.share({ title: 'Shopping List', text }); } catch (_) {}

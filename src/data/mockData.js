@@ -177,9 +177,172 @@ export const ingredientsList = [
     }
   ];
 
+export const RECIPE_DETAILS = {
+  'Smoky Party Jollof Rice': {
+    description: "The legendary Nigerian one-pot classic, perfected with that signature wood-fire smoke flavour. A centrepiece of every celebration.",
+    badge: 'TRADITIONAL',
+    rating: 4,
+    reviews: 120,
+    detailTime: '65 MIN',
+    nutrition: { protein: '18g', energy: '540 kcal', carbs: '78g', fat: '12g' },
+    tip: "Don't let the bottom burn too much! A little 'bun-bun' is traditional and adds flavour, but keep it controlled by using foil under the lid to trap steam.",
+    ingredients: [
+      { name: 'Long-grain Parboiled Rice', amount: '3 Cups' },
+      { name: 'Red Bell Peppers (Tatashe)', amount: '3 Large' },
+      { name: 'Plum Tomatoes', amount: '5 Medium' },
+      { name: 'Scotch Bonnet (Atarodo)', amount: '2–3 Small' },
+      { name: 'Chicken or Beef Stock', amount: '4 Cups' },
+      { name: 'Vegetable Oil', amount: '½ Cup' },
+      { name: 'Tomato Paste', amount: '150g' },
+    ],
+    steps: [
+      { title: 'The Base Blend', description: "Blend the bell peppers, tomatoes, onions, and scotch bonnets until smooth. Boil down until the water evaporates and you're left with a thick paste." },
+      { title: 'Fry the Paste', description: "Heat oil in a large pot. Fry sliced onions until translucent. Add tomato paste and fry for 5 minutes. Add the pepper blend and fry until oil separates from the sauce." },
+      { title: 'Seasoning', description: "Add curry powder, thyme, bay leaves, and bouillon cubes. Pour in the stock. Season with salt — the liquid should be slightly saltier than you want the rice to be." },
+      { title: 'The Rice Steam', description: "Add washed rice so the liquid is just above the rice. Cover tightly with foil then the pot lid. Cook on very low heat for 30 minutes until tender." },
+      { title: 'The Finish', description: "Turn up the heat for the last 2–3 minutes to get that smoky 'bottom burn' aroma. Stir in butter and fresh onion rings. Fluff and serve hot." },
+    ],
+  },
+
+  'Egusi Soup with Spinach': {
+    description: "A rich, earthy West African classic packed with ground melon seeds and vibrant spinach. High in protein and deeply satisfying — perfect for meal prep.",
+    badge: 'HIGH PROTEIN',
+    rating: 5,
+    reviews: 89,
+    detailTime: '75 MIN',
+    nutrition: { protein: '28g', energy: '480 kcal', carbs: '12g', fat: '32g' },
+    tip: "Fry the ground egusi in palm oil until it changes colour and smells nutty before adding any liquid — this is the secret to a rich, non-bitter soup.",
+    ingredients: [
+      { name: 'Ground Egusi Seeds', amount: '2 Cups' },
+      { name: 'Fresh Spinach (Efo)', amount: '300g' },
+      { name: 'Palm Oil', amount: '½ Cup' },
+      { name: 'Assorted Beef & Tripe', amount: '500g' },
+      { name: 'Ground Crayfish', amount: '3 tbsp' },
+      { name: 'Onions', amount: '1 Large' },
+      { name: 'Scotch Bonnet', amount: '2 Pieces' },
+      { name: 'Stock Cubes', amount: '2 Cubes' },
+    ],
+    steps: [
+      { title: 'Cook the Meat', description: "Season beef and tripe with onions, stock cubes, and salt. Cook until tender, about 20 minutes. Reserve the stock." },
+      { title: 'Fry the Egusi', description: "Heat palm oil in a pot. Add ground egusi and stir continuously over medium heat for 8–10 minutes until golden and nutty-smelling." },
+      { title: 'Build the Base', description: "Add blended onion, scotch bonnet, and crayfish to the pot. Stir and fry for 5 minutes." },
+      { title: 'Add Meat & Stock', description: "Add cooked meat and enough stock for a thick stew consistency. Simmer on low heat for 15 minutes, stirring occasionally." },
+      { title: 'Finish with Spinach', description: "Stir in washed, chopped spinach. Cook 3–4 minutes until just wilted. Taste, adjust seasoning, and serve with eba, fufu, or rice." },
+    ],
+  },
+
+  'Garden Harvest Bowl': {
+    description: "A vibrant, nutrient-packed bowl of grains, fresh vegetables, and toasted seeds. Quick to assemble and endlessly customisable with whatever's in your pantry.",
+    badge: 'BALANCED',
+    rating: 4,
+    reviews: 56,
+    detailTime: '20 MIN',
+    nutrition: { protein: '12g', energy: '380 kcal', carbs: '48g', fat: '14g' },
+    tip: "Toast seeds in a dry pan for 2 minutes before adding — it unlocks a deeper nutty flavour and gives a great crunch.",
+    ingredients: [
+      { name: 'Cooked Brown Rice or Quinoa', amount: '1½ Cups' },
+      { name: 'Mixed Salad Greens', amount: '2 Handfuls' },
+      { name: 'Cucumber', amount: '1 Medium' },
+      { name: 'Cherry Tomatoes', amount: '10 Pieces' },
+      { name: 'Avocado', amount: '1 Medium' },
+      { name: 'Mixed Seeds', amount: '2 tbsp' },
+      { name: 'Olive Oil', amount: '2 tbsp' },
+      { name: 'Lemon Juice', amount: '1 Lemon' },
+    ],
+    steps: [
+      { title: 'Cook the Grain', description: "Cook rice or quinoa per package instructions. Rinse with cold water and set aside to cool slightly." },
+      { title: 'Prep the Vegetables', description: "Halve cherry tomatoes, dice cucumber, and slice avocado. Wash and dry the greens." },
+      { title: 'Toast the Seeds', description: "Dry-toast seeds in a pan over medium heat for 2 minutes, shaking frequently, until golden and fragrant." },
+      { title: 'Make the Dressing', description: "Whisk olive oil, lemon juice, a pinch of salt, and black pepper. Taste and adjust." },
+      { title: 'Assemble & Serve', description: "Layer grain in a bowl, top with greens and vegetables. Drizzle with dressing and scatter toasted seeds. Serve immediately." },
+    ],
+  },
+
+  'Gizdodo Breakfast': {
+    description: "A Nigerian breakfast staple combining tender fried gizzard with sweet caramelised dodo. Bold flavours, satisfying textures — the ultimate morning energy boost.",
+    badge: 'STREET FOOD',
+    rating: 4,
+    reviews: 74,
+    detailTime: '30 MIN',
+    nutrition: { protein: '24g', energy: '420 kcal', carbs: '36g', fat: '18g' },
+    tip: "Parboil the gizzard for 15 minutes before frying — it ensures they're cooked through and tender inside while still getting crispy outside.",
+    ingredients: [
+      { name: 'Chicken Gizzards', amount: '400g' },
+      { name: 'Ripe Plantains', amount: '2 Large' },
+      { name: 'Red Bell Pepper', amount: '1 Large' },
+      { name: 'Scotch Bonnet', amount: '1 Piece' },
+      { name: 'Onions', amount: '1 Medium' },
+      { name: 'Vegetable Oil', amount: '1 Cup' },
+      { name: 'Suya Spice / Seasoning', amount: '1 tbsp' },
+      { name: 'Salt & Stock Cube', amount: 'To taste' },
+    ],
+    steps: [
+      { title: 'Parboil the Gizzard', description: "Season gizzards with salt, stock cube, and onion. Parboil for 15 minutes. Drain and pat dry." },
+      { title: 'Fry the Dodo', description: "Peel and slice plantains diagonally. Fry in hot oil until golden on both sides, about 3–4 minutes per side. Drain on paper towels." },
+      { title: 'Fry the Gizzard', description: "In the same oil, fry gizzards on medium-high heat for 6–8 minutes until crispy and browned. Drain and set aside." },
+      { title: 'Sauté the Peppers', description: "Leave 2 tbsp oil in the pan. Sauté diced onions, bell pepper, and scotch bonnet for 3 minutes until softened." },
+      { title: 'Combine & Serve', description: "Add gizzards and dodo back to the pan. Toss with the pepper mix and suya spice. Taste, adjust seasoning, and serve hot." },
+    ],
+  },
+
+  'Beef Suya Skewers': {
+    description: "West Africa's beloved street food — thinly sliced beef coated in a smoky, nutty yaji spice blend and grilled over open flame. Addictive, bold, and deeply flavourful.",
+    badge: 'STREET FOOD',
+    rating: 5,
+    reviews: 143,
+    detailTime: '35 MIN',
+    nutrition: { protein: '38g', energy: '380 kcal', carbs: '6g', fat: '22g' },
+    tip: "Freeze the beef for 30 minutes before slicing — it makes cutting paper-thin strips much easier and they cook more evenly on the grill.",
+    ingredients: [
+      { name: 'Beef Sirloin or Rump', amount: '500g' },
+      { name: 'Ground Groundnuts (peanuts)', amount: '½ Cup' },
+      { name: 'Yaji Suya Spice Mix', amount: '3 tbsp' },
+      { name: 'Ginger Powder', amount: '1 tsp' },
+      { name: 'Garlic Powder', amount: '1 tsp' },
+      { name: 'Vegetable Oil', amount: '3 tbsp' },
+      { name: 'Onion', amount: '1 Large (for garnish)' },
+      { name: 'Salt', amount: 'To taste' },
+    ],
+    steps: [
+      { title: 'Slice the Beef', description: "Freeze beef for 20–30 minutes. Slice as thinly as possible across the grain, about 3mm thick. Thinner slices = more tender result." },
+      { title: 'Make the Yaji Marinade', description: "Combine ground groundnuts, suya spice, ginger, garlic, and salt. Mix with oil to form a paste. Reserve some for basting." },
+      { title: 'Marinate & Skewer', description: "Coat beef slices thoroughly in the yaji paste. Thread onto pre-soaked skewers. Marinate at least 30 minutes." },
+      { title: 'Grill or Roast', description: "Grill over charcoal or under a hot oven broiler for 3–4 minutes per side. Baste with reserved paste halfway through." },
+      { title: 'Serve', description: "Serve immediately garnished with sliced raw onions, tomatoes, and extra suya spice. Best enjoyed straight off the skewer." },
+    ],
+  },
+
+  'Puff Puff Dessert': {
+    description: "Nigeria's favourite fried dough — impossibly light, golden, and slightly sweetened. A crowd-pleasing treat that disappears in minutes at every gathering.",
+    badge: 'DESSERT',
+    rating: 5,
+    reviews: 98,
+    detailTime: '30 MIN',
+    nutrition: { protein: '4g', energy: '320 kcal', carbs: '44g', fat: '14g' },
+    tip: "The batter should be thick enough to hold its shape when dropped from a spoon. Too thin = flat puff puff. Let it rest 10 minutes after mixing so the yeast activates fully.",
+    ingredients: [
+      { name: 'Plain Flour', amount: '2 Cups' },
+      { name: 'Active Dry Yeast', amount: '1 tsp' },
+      { name: 'Sugar', amount: '4 tbsp' },
+      { name: 'Salt', amount: '½ tsp' },
+      { name: 'Warm Water', amount: '1 Cup' },
+      { name: 'Ground Nutmeg', amount: '¼ tsp' },
+      { name: 'Vegetable Oil', amount: '3 Cups (for frying)' },
+    ],
+    steps: [
+      { title: 'Activate the Yeast', description: "Mix yeast with 2 tbsp warm water and 1 tsp sugar. Let stand 5 minutes until frothy — this confirms the yeast is active." },
+      { title: 'Make the Batter', description: "Combine flour, remaining sugar, salt, and nutmeg. Add activated yeast and warm water gradually, stirring to a thick, smooth batter." },
+      { title: 'Rest the Batter', description: "Cover the bowl with a clean cloth and rest in a warm spot for 10–15 minutes until slightly puffed." },
+      { title: 'Fry in Batches', description: "Heat oil to 175°C. Drop spoonfuls of batter into the oil without overcrowding. Fry 2–3 minutes per side until deep golden brown." },
+      { title: 'Drain & Serve', description: "Drain on paper towels. Serve warm, dusted with powdered sugar or with a cold drink. Best eaten fresh." },
+    ],
+  },
+};
+
   export const ALL_RECIPES = [
   {
-    image: 'https://images.unsplash.com/photo-1574484284002-952d92456975?auto=format&fit=crop&q=80&w=800',
+    // Nigerian Jollof rice with fried fish — by Keesha's Kitchen
+    image: 'https://images.unsplash.com/photo-1665332195309-9d75071138f0?auto=format&fit=crop&q=80&w=800',
     title: 'Smoky Party Jollof Rice',
     category: 'Dinner',
     time: '45m',
@@ -188,7 +351,8 @@ export const ingredientsList = [
     comment: 'Uses your expiring bell peppers and scotch bonnets.',
   },
   {
-    image: 'https://images.unsplash.com/photo-1763048443535-1243379234e2?q=80&w=672&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    // Actual egusi soup with assorted meats — by Tosan Dudun
+    image: 'https://images.unsplash.com/photo-1763048443535-1243379234e2?auto=format&fit=crop&q=80&w=800',
     title: 'Egusi Soup with Spinach',
     category: 'Dinner',
     time: '60m',
@@ -197,6 +361,7 @@ export const ingredientsList = [
     comment: 'High in protein and perfect for meal prepping.',
   },
   {
+    // Colourful grain & vegetable harvest bowl
     image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=800',
     title: 'Garden Harvest Bowl',
     category: 'Lunch',
@@ -206,7 +371,8 @@ export const ingredientsList = [
     comment: 'Quick lunch option with your current stock.',
   },
   {
-    image: 'https://images.unsplash.com/photo-1481833761820-0509d3217039?auto=format&fit=crop&q=80&w=800',
+    // West African breakfast plate — meat, rice & plantain
+    image: 'https://images.unsplash.com/photo-1705088293214-7494366cce01?auto=format&fit=crop&q=80&w=800',
     title: 'Gizdodo Breakfast',
     category: 'Breakfast',
     time: '15m',
@@ -215,7 +381,8 @@ export const ingredientsList = [
     comment: 'Uses those overripe plantains.',
   },
   {
-    image: 'https://images.unsplash.com/photo-1529042410759-befb1204b468?auto=format&fit=crop&q=80&w=800',
+    // Smoked meat & peppers at Nigerian street stall, Benin City — by Ben Iwara
+    image: 'https://images.unsplash.com/photo-1765584830134-12d879ad13bd?auto=format&fit=crop&q=80&w=800',
     title: 'Beef Suya Skewers',
     category: 'Quick Bites',
     time: '30m',
@@ -224,7 +391,8 @@ export const ingredientsList = [
     comment: 'Classic spicy street food at home.',
   },
   {
-    image: 'https://images.unsplash.com/photo-1505275350441-83dcda8eeef5?auto=format&fit=crop&q=80&w=800',
+    // Golden fried dough balls on cooling rack — by Yulin Wang
+    image: 'https://images.unsplash.com/photo-1759302307623-0ed463b8a9b9?auto=format&fit=crop&q=80&w=800',
     title: 'Puff Puff Dessert',
     category: 'Desserts',
     time: '25m',
