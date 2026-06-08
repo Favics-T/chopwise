@@ -188,7 +188,7 @@ export const ingredientsList = [
     comment: 'Uses your expiring bell peppers and scotch bonnets.',
   },
   {
-    image: 'https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&q=80&w=800',
+    image: 'https://images.unsplash.com/photo-1763048443535-1243379234e2?q=80&w=672&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     title: 'Egusi Soup with Spinach',
     category: 'Dinner',
     time: '60m',

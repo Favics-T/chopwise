@@ -12,9 +12,6 @@ import {
   Clock,
   X
 } from 'lucide-react';
-import BottomNav from '../../components/BottomNav';
-import { useNavigate } from 'react-router-dom';
-import { ALL_RECIPES } from '../../data/mockData';
 import RecipeCard from './RecipeCard';
 import { useRecipe} from '../../hook/useRecipe';
 import { useRecipeFilters } from '../../hook/useRecipeFilter';
